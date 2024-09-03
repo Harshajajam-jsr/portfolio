@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add this to your CSS */
+        .tab-links.active-link {
+             /* Change this to the color you want for the active tab */
+            font-weight: bold;
+        }
+        .tab-contents {
+            display: none;
+        }
+        .tab-contents.active-tab {
+            display: block;
+        }
+        .tab-contents.active-tab span {
+            color: #ff004f; /* Change this to the color you want for the text within the active tab */
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/4734111260.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li> 
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Java Full Stack Developer</p>
+            <h1>Hi, I'm <span>Harshavardhan Kumar</span><br> Jajam from Hyderabad</h1>
+        </div>
+    </div>
+</div>
+
+<!------------------about----------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.jpg">
+            </div>
+            <div class="about-col-1">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, I'm Jajam Sri Ranga Harshavardhan Kumar, a dedicated B.Tech student at Ramachandra College of Engineering, Eluru. 
+                    I honed my web development skills through an internship at Internshala Trainings. Currently thriving as a Feature Skill Expert in Andhra Pradesh Government Schools,
+                     I bring a unique blend of technical expertise. Proficient in creating captivating front-end developments using HTML, CSS, and JS, along with Node.js. 
+                     I am passionate about learning new technologies and always eager to contribute to meaningful projects. Excited about the journey ahead!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Software Developer</span><br>To design web applications</li>
+                        <li><span>Java Developer</span><br>Java Full Stack Developer</li>
+                        <li><span>Python Trainee</span><br>Python Trainer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024 - Python Trainer</span><br>InternStump Edutech</li>
+                        <li><span>2024 - Feature Skill Expert</span><br>Government of Andhra Pradesh School Education</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2024</span><br>BTech in Computer Science & Engineering, <br>Ramachandra College Of Engineering</li>
+                        <li><span>2018-2021</span><br>Diploma in Plastic Mould Technology, CIPET</li>
+                        <li><span>Python Trainee</span><br>Python Trainer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Desgin</h2>
+                <p>we will help you to make a beautiful webpages for your business</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>Java Full stack</h2>
+                <p>we will provides websites for you business needs as per you recquirement</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h2>Python Trainings</h2>
+                <p>we will make you to learn all the programming concepts in Python</p>
+                <a href="#">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-----------------Portflio----------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                 <div class="layer">
+                    <h3>My Project</h3>
+                    <p>Solar-powered trimmer with LiDAR, IoT, and adaptable head offers precise, efficient, and sustainable lawn care.</p>
+                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                 </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.jpg">
+                <div class="layer">
+                    <h3>Portfolio Building work</h3>
+                    <p>Portfolio creation is customized to your needs, ensuring a tailored, impressive showcase that highlights your unique strengths.</p>
+                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                 </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg">
+                <div class="layer">
+                    <h3>websites</h3>
+                    <p>Java Full Stack enables dynamic, responsive websites using Java backend and front-end technologies efficiently..</p>
+                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                 </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-----------------contact-------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> harshajajam11@gmal.com</p>
+                <p><i class="fa-solid fa-phone"></i> 6303434368</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/harshavardhan-kumar-jajam/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/harshavardhan-kumar-jajam/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/harshavardhan-kumar-jajam/"><i class="fa-brands fa-linkedin"></i></a>
+
+                </div>
+                <a href="images/harsha jajam.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright © Harsha Jajam made with <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+    
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(let tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(let tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxrPUpPsTfiTFUuBwV6K-l-w5e8X0H0gOr8FHzK9EfbIupYPNDJnGI-9EeFogIlPYCU/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },10000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
